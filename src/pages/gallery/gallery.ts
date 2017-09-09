@@ -25,6 +25,6 @@ export class GalleryPage {
   ionViewDidLoad() {}
 
   showGalleryDetails(gallery) {
-    this.navCtrl.setRoot(GalleryDetailsPage, { gallery });
+    this.navCtrl.push(GalleryDetailsPage, { gallery });
   }
 }
