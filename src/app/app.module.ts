@@ -11,6 +11,7 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 import { ProfilePageModule } from "../pages/profile/profile.module";
 import { PageProvider } from "../providers/page/page";
 import { GalleryPageModule } from "../pages/gallery/gallery.module";
+import { GalleryDetailsPageModule } from "../pages/gallery-details/gallery-details.module";
 
 @NgModule({
   declarations: [MyApp, HomePage, ListPage],
@@ -18,7 +19,8 @@ import { GalleryPageModule } from "../pages/gallery/gallery.module";
     BrowserModule,
     IonicModule.forRoot(MyApp),
     ProfilePageModule,
-    GalleryPageModule
+    GalleryPageModule,
+    GalleryDetailsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, HomePage, ListPage],

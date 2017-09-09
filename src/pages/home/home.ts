@@ -13,6 +13,8 @@ export class HomePage {
   ) {}
 
   goToPage(component) {
-    this.navCtrl.push(component);
+    let data = { name: "Azri", email: "mazri.iar@gmail.com" };
+
+    this.navCtrl.push(component, data);
   }
 }

@@ -7,12 +7,53 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Profile</ion-title>
+    <ion-title>{{ name }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
 
+    <ion-item>
+      <ion-label fixed>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="formData.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="formData.password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Phone No</ion-label>
+      <ion-input type="text" [(ngModel)]="formData.phone_no"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Address</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="formData.address"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Gender</ion-label>
+      <ion-select [(ngModel)]="formData.gender">
+        <ion-option *ngFor="let gender of genders">{{ gender }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Is Online</ion-label>
+      <ion-toggle [(ngModel)]="formData.is_online"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button block (click)="saveProfile()">Save</button>
+    </ion-item>
+  </ion-list>
 </ion-content>

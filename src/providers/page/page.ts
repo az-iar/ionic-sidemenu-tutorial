@@ -15,7 +15,11 @@ export class PageProvider {
   constructor() {}
 
   public pages = [
-    { name: "Profile", component: ProfilePage },
+    {
+      name: "Profile",
+      component: ProfilePage,
+      data: { name: "Ali", email: "ali@email.com" }
+    },
     { name: "Gallery", component: GalleryPage }
   ];
 }

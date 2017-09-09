@@ -14,5 +14,10 @@
 
 
 <ion-content padding>
-
+  <ion-card *ngFor="let gallery of galleries">
+    <img [src]="gallery.thumbnail" alt="">
+    <ion-card-header>
+      {{ gallery.title }}
+    </ion-card-header>
+  </ion-card>
 </ion-content>
